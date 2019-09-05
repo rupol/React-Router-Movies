@@ -25,17 +25,6 @@ a {
   border: 2px solid #000;
 }
 
-.movie-card-save {
-  background-color: #fff;
-  border          : 2px solid #fff;
-  box-shadow      : 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
-  padding : 1rem;
-  cursor  : pointer;
-  position: relative;
-  margin  : 1rem auto;
-}
-
 .movie-director {
   padding  : 4px 0;
   font-size: 0.8rem;
@@ -73,6 +62,17 @@ a {
 .save-wrapper {
   position: relative;
   width   : 75%;
+  margin  : 1rem auto;
+}
+
+.save-wrapper .movie-card {
+  background-color: #fff;
+  border          : 2px solid #fff;
+  box-shadow      : 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  padding : 1rem;
+  cursor  : pointer;
+  position: relative;
   margin  : 1rem auto;
 }
 
