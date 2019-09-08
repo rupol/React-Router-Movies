@@ -5,6 +5,7 @@ import MovieCard from "./MovieCard";
 
 const Movie = props => {
   const [movie, setMovie] = useState(undefined);
+  console.log("movie props", props);
 
   useEffect(() => {
     const id = props.match.params.movieId;
@@ -22,10 +23,10 @@ const Movie = props => {
   }, [props.match.params.movieId]);
 
   // Uncomment this only when you have moved on to the stretch goals
-  // const saveMovie = () => {
-  //   const addToSavedList = props.addToSavedList;
-  //   addToSavedList(movie)
-  // }
+  const saveMovie = () => {
+    const addToSavedList = props.addToSavedList;
+    addToSavedList(movie);
+  };
 
   if (!movie) {
     return (
@@ -38,7 +39,9 @@ const Movie = props => {
   return (
     <div className="save-wrapper">
       <MovieCard movie={movie} />
-      <div className="save-button">Save</div>
+      <button onClick={saveMovie} className="save-button">
+        Save
+      </button>
     </div>
   );
 };
