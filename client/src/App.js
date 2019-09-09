@@ -12,16 +12,22 @@ const App = () => {
     setSavedList([...savedList, movie]);
   };
 
+  const clearSavedList = () => {
+    setSavedList([]);
+  };
+
   return (
     <div>
       <Route
         path="/"
-        render={props => <SavedList list={savedList} {...props} />}
+        render={props => (
+          <SavedList
+            list={savedList}
+            clearSavedList={clearSavedList}
+            {...props}
+          />
+        )}
       />
-      {/* <Route
-        path="/"
-        render={props => <Movie addToSavedList={addToSavedList} {...props} />}
-      /> */}
       <Route exact path="/" component={MovieList} />
       <Route
         exact
