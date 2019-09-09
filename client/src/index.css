@@ -50,13 +50,14 @@ a {
 }
 
 .saved-movie {
-  margin: 0 10px;
+  margin          : 0 10px;
+  padding         : 5px 10px;
+  background-color: lightseagreen;
 }
 
-.saved-active {
-  color  : blue;
-  border : 1px solid grey;
-  padding: 5px;
+.saved-movie.active {
+  color           : white;
+  background-color: green;
 }
 
 .save-wrapper {
